@@ -4,6 +4,9 @@
 // output: ['is', 'a', 'split', 'sentence.', 'This']
 
 function rearranger(arr) {
+    let val = arr.shift()
+    arr.push(val)
+    return arr
 }
 
 
@@ -16,6 +19,7 @@ function rearranger(arr) {
 // output: 42
 
 function largestNum(arr) {
+    return Math.max(...arr)
 }
 
 
@@ -26,8 +30,16 @@ function largestNum(arr) {
 // Example:
 // input:  [4, 2, 1, 7]
 // output: [16, 8, 4, 28]
-
 function elemsTimesLength(arr) {
+    //need new array
+    let multiplyArr = []
+    //loop through old array
+    for (let i = 0; i < arr.length; i++) {
+        const member = arr[i];
+        //get old array length
+        multiplyArr.push(arr.length * member)
+    }
+    return multiplyArr
 }
 
 
@@ -63,7 +75,24 @@ let flights = [{
 
 function flightCost(destination, firstClass) {
     //***hint: use the find method***
+    let myFlight = flights.find(f => f.to == destination)
+    for (let i = 0; i < flights.length; i++) {
+        const element = flights[i];
+        //   debugger
+    }
 
+
+
+
+    // for (let i = 0; i < flights.length; i++) {
+    //     const member = flights[i];
+    //     //find cost of flights to neighboring city | return standard cost except firstClass=true
+
+    //     if (destination != "boi" && firstClass == false) {
+    //         find(flights.prices.standard)
+    //     }
+    // }
+    // return find
 }
 
 
